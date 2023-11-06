@@ -1,0 +1,9 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#products{
+    width: 100vw;
+    height: 100vh;
+}

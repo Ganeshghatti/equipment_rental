@@ -1,0 +1,18 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+.navbar {
+  width: 100vw;
+  @include flex(row);
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  height: 10vh;
+  z-index: 999;
+  background-color: red;
+  top: 0;
+  padding: 20px 0;
+  left: 0;
+}

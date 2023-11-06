@@ -1,0 +1,25 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#features {
+  width: 100vw;
+  @include flex(column);
+  gap: 40px;
+  padding: 50px 0;
+  .features-div {
+    @include flex(row);
+    flex-wrap: wrap;
+    gap: 5vw 0;
+    justify-content: space-around;
+    .card {
+      @include flex(column);
+      align-items: start;
+      justify-content: center;
+      img {
+        padding: 0 0 0 20px;
+      }
+    }
+  }
+}

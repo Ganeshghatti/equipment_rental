@@ -1,0 +1,19 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+#hero {
+  width: 100vw;
+  height: 100vh;
+  .hero-slide1 {
+    width: 100vw ;
+    height: 100vh !important;
+    background-image: url("../../../../public/Asssets/Images/Hero/Heroimage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include flex(column);
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

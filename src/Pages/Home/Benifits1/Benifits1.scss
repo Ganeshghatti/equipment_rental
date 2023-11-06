@@ -1,0 +1,50 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#benifits1 {
+  padding: 50px 0;
+  width: 100vw;
+  .benifits-div {
+    width: 100vw;
+    padding: 0 5vw;
+    .benifits-left {
+      @include flex(column);
+      justify-content: center;
+      .benefits-left-container {
+        @include flex(row);
+        @media (max-width: 770px) {
+          flex-direction: column;
+        }
+      }
+    }
+    .benifits-right {
+      @media (max-width: 770px) {
+        .image-container {
+          img {
+            width: 100%;
+          }
+        }
+        margin-top: 40px;
+      }
+      @media (min-width: 770px) {
+        .image-container {
+          position: relative;
+        }
+        .image-container::after {
+          content: "";
+          display: block;
+          background-color: yellow;
+          transform: translate(30px, 50px);
+          height: calc(100% - 20px);
+          width: 190px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
