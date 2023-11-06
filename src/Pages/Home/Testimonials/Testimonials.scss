@@ -1,0 +1,25 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#testimonails {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+  background-color: #010101;
+  .testimonials-img {
+    position: absolute;
+    left: 0;
+    width: 60vw;
+    z-index: 1;
+  }
+  .testimonials-content {
+    position: absolute;
+    background-color: #010101;
+    left: 50vw;
+    margin-top: 20vh;
+    padding: 20px;
+    z-index: 2;
+  }
+}

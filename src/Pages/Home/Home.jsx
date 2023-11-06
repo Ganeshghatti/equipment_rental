@@ -5,6 +5,8 @@ import Category from './Category/Category'
 import Benifits1 from './Benifits1/Benifits1'
 import Features from './Features/Features'
 import Benifits2 from './Benifits2/Benifits2'
+import HowDoesItWork from './HowDoesItWork/HowDoesItWork'
+import Testimonials from './Testimonials/Testimonials'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Brands/>
       <Features/>
       <Benifits2/>
+      <HowDoesItWork/>
+      <Testimonials/>
     </>
   )
 }

@@ -1,0 +1,17 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#HowDoesItWork {
+  width: 100vw;
+  padding: 50px 0;
+  @include flex(column);
+  align-items: center;
+  .HowDoesItWorkImg {
+    width: 45vw;
+    @media (max-width: 770px) {
+      width: 80vw;
+    }
+  }
+}

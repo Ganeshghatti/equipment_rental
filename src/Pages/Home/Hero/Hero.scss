@@ -4,16 +4,25 @@
 }
 #hero {
   width: 100vw;
-  height: 100vh;
-  .hero-slide1 {
-    width: 100vw ;
-    height: 100vh !important;
-    background-image: url("../../../../public/Asssets/Images/Hero/Heroimage.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    @include flex(column);
-    justify-content: flex-end;
+  height: 120vh;
+  @include flex(column);
+  align-items: center;
+  justify-content: center;
+  form {
+    width: 95vw;
+    @include flex(row);
+    background-color: rgba(0, 0, 0, 0.561);
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
     align-items: center;
+    @media (max-width: 770px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
   }
+}
+.custom-datepicker .MuiInputBase-root {
+  padding-top: 0;
 }
