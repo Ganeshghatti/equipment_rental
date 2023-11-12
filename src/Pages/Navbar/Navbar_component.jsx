@@ -70,7 +70,7 @@ export default function NavbarComponent() {
                     <option
                       value={item.link}
                       key={index}
-                      onClick={() => dropdownf(item.link)}
+                      onChange={() => dropdownf(item.link)}
                       style={{ backgroundColor: "#1d1d1d", color: "white" }}
                     >
                       {item.category}
