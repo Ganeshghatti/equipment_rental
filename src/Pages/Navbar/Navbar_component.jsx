@@ -16,11 +16,12 @@ export default function NavbarComponent() {
   };
 
   const dropdownf = (link) => {
-    console.log("object")
+    console.log("object");
     setmenu(!menu);
-    console.log(link)
+    console.log(link);
     window.location.href = `${link}`;
   };
+
   const categories = [
     { category: "a", link: "/categories/a" },
     { category: "a", link: "/categories/a" },
@@ -59,7 +60,15 @@ export default function NavbarComponent() {
                 </Link>
               </li>
               <li>
-                <select style={{ backgroundColor: "#1d1d1d", color: "white" ,border:"none",fontWeight:"800"}}>
+                <select
+                  style={{
+                    backgroundColor: "#1d1d1d",
+                    color: "white",
+                    border: "none",
+                    fontWeight: "800",
+                  }}
+                  onChange={(e) => dropdownf(e.target.value)}
+                >
                   <option
                     value={null}
                     style={{ backgroundColor: "#1d1d1d", color: "white" }}
@@ -70,7 +79,7 @@ export default function NavbarComponent() {
                     <option
                       value={item.link}
                       key={index}
-                      onChange={() => dropdownf(item.link)}
+                      // onChange={() => dropdownf(item.link)}
                       style={{ backgroundColor: "#1d1d1d", color: "white" }}
                     >
                       {item.category}
