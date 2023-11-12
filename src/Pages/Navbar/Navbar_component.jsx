@@ -15,6 +15,10 @@ export default function NavbarComponent() {
     setmenu(!menu);
   };
 
+  const dropdownf = (link) => {
+    setmenu(!menu);
+    window.location.href = `${link}`;
+  };
   const categories = [
     { category: "a", link: "/categories/a" },
     { category: "a", link: "/categories/a" },
@@ -52,17 +56,25 @@ export default function NavbarComponent() {
                   <b>Working</b>
                 </Link>
               </li>
-              <li onClick={menuf}>
-                <div className="w3-dropdown-hover">
-                  <button className="w3-button ">Categories</button>
-                  <div className="w3-dropdown-content w3-bar-block w3-border">
-                    {categories.map((item, index) => (
-                      <Link to={item.link} className="w3-bar-item w3-button">
-                        {item.category}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+              <li>
+                <select style={{ backgroundColor: "#1d1d1d", color: "white" ,border:"none",fontWeight:"800"}}>
+                  <option
+                    value={null}
+                    style={{ backgroundColor: "#1d1d1d", color: "white" }}
+                  >
+                    Select a category
+                  </option>
+                  {categories.map((item, index) => (
+                    <option
+                      value={item.link}
+                      key={index}
+                      onClick={() => dropdownf(item.link)}
+                      style={{ backgroundColor: "#1d1d1d", color: "white" }}
+                    >
+                      {item.category}
+                    </option>
+                  ))}
+                </select>
               </li>
             </ul>
 
