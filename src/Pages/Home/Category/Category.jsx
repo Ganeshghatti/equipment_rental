@@ -43,6 +43,7 @@ export default function Category() {
     },
   ];
   const handleClick = (category) => {
+    console.log(category)
     window.location.href = `/categories/${category}`;
   };
 
