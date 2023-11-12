@@ -17,6 +17,7 @@ export default function NavbarComponent() {
 
   const dropdownf = (link) => {
     setmenu(!menu);
+    console.log(link)
     window.location.href = `${link}`;
   };
   const categories = [
