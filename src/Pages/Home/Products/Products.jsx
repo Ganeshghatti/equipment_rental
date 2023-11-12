@@ -8,11 +8,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Products() {
+  const navigate = useNavigate();
 
   const handleOpen = (product) => {
-    window.location.href = `/${product.name}`;
+    navigate(`/${product.name}`);
   };
 
   const { category } = useParams();
@@ -34,7 +36,6 @@ export default function Products() {
     };
     getaccdata();
   }, []);
-
 
   //Data will be fetched from backend according to Category clicked
 
@@ -103,7 +104,7 @@ export default function Products() {
       price: "10",
     },
   ];
-  
+
   return (
     <section id="products">
       <div className="products-title-div" onClick={handleClick}>

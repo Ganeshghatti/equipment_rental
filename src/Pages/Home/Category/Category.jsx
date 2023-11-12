@@ -48,8 +48,6 @@ export default function Category() {
   const handleClick = (category) => {
     console.log(category);
     navigate(`/categories/${category}`);
-
-    // window.location.href = `/categories/${category}`;
   };
 
   return (

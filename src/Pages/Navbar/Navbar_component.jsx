@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function NavbarComponent() {
+  const navigate = useNavigate();
   const [menu, setmenu] = useState(false);
 
   const menuf = () => {
@@ -17,10 +18,8 @@ export default function NavbarComponent() {
   };
 
   const dropdownf = (link) => {
-    console.log("object");
     setmenu(!menu);
-    console.log(link);
-    window.location.href = `${link}`;
+    navigate(`${link}`);
   };
 
   const categories = [
