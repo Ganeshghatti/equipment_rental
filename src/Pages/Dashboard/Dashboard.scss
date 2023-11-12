@@ -1,0 +1,132 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#dashboard {
+  width: 100vw;
+  margin-top: 15vh;
+  @include flex(column);
+  align-items: center;
+}
+#dashboard-inventory {
+  width: 100vw;
+  margin-top: 10vh;
+  @include flex(column);
+  align-items: center;
+  gap: 50px;
+  .dashboard-inventory-search {
+    width: 60vw;
+    padding: 10px 20px;
+    border: 2px solid black;
+    @media (max-width: 770px) {
+      width: 80vw;
+    }
+  }
+  .dashboard-inventory-items {
+    width: 90vw;
+    justify-content: space-between;
+    @include flex(row);
+    gap: 35px;
+    flex-wrap: wrap;
+    .dashboard-inventory-card {
+      width: 20vw;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+      &:hover {
+        box-shadow: yellow 0px 1px 5px 0px;
+      }
+      @media (max-width: 1000px) {
+        width: 25vw;
+      }
+      @media (max-width: 770px) {
+        width: 40vw;
+        margin: 20px auto;
+      }
+      .dashboard-card-inventory-contentt {
+        @include flex(column);
+        gap: 10px;
+      }
+    }
+  }
+}
+
+#dashboard-onrent {
+  width: 100vw;
+  margin-top: 10vh;
+  @include flex(column);
+  align-items: center;
+  gap: 50px;
+  .dashboard-onrent-div {
+    width: 90vw;
+    justify-content: space-between;
+    @include flex(row);
+    gap: 35px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .dashboard-onrent-card {
+      width: 40vw;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+      &:hover {
+        box-shadow: yellow 0px 1px 5px 0px;
+      }
+      @media (max-width: 1000px) {
+        width: 50vw;
+      }
+      @media (max-width: 770px) {
+        width: 80vw;
+        margin: 20px auto;
+      }
+      .dashboard-onrent-card-content {
+        @include flex(column);
+        gap: 5px;
+      }
+    }
+  }
+}
+
+#dashboard-itemstobecollectedback {
+  width: 100vw;
+  margin-top: 10vh;
+  @include flex(column);
+  align-items: center;
+  gap: 50px;
+  .dashboard-itemstobecollectedback-div {
+    width: 90vw;
+    justify-content: space-between;
+    @include flex(row);
+    gap: 35px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .dashboard-itemstobecollectedback-card {
+      width: 40vw;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+      &:hover {
+        box-shadow: yellow 0px 1px 5px 0px;
+      }
+      @media (max-width: 1000px) {
+        width: 50vw;
+      }
+      @media (max-width: 770px) {
+        width: 80vw;
+        margin: 20px auto;
+      }
+      .dashboard-itemstobecollectedback-card-content {
+        @include flex(column);
+        gap: 5px;
+      }
+    }
+  }
+}
+
+p,
+h6 {
+  margin-bottom: 0 !important;
+}

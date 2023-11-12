@@ -8,11 +8,41 @@
   height: 100vh;
   padding: 50px 0;
   background-color: #010101;
+  @media (max-width: 770px) {
+    @include flex(column);
+    height: 50vh;
+    justify-content: center;
+  }
+  h1 {
+    color: white !important;
+    margin-bottom: 50px;
+    padding: 0 0 0 8vw;
+    position: relative;
+    @media (max-width: 770px) {
+      align-items: center;
+      padding: 0;
+      text-align: center;
+    }
+  }
+  @media (min-width: 770px) {
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 9.5vw;
+      bottom: -15px;
+      width: 80px;
+      height: 7px;
+      background-color: yellow;
+    }
+  }
   .testimonials-img {
     position: absolute;
-    left: 0;
-    width: 60vw;
+    left: 10vw;
+    width: 50vw;
     z-index: 1;
+    @media (max-width: 770px) {
+      width: 40vw;
+    }
   }
   .testimonials-content {
     position: absolute;
@@ -21,5 +51,8 @@
     margin-top: 20vh;
     padding: 20px;
     z-index: 2;
+    @media (max-width: 770px) {
+      margin: 0;
+    }
   }
 }

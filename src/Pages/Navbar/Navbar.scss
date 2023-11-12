@@ -3,16 +3,63 @@
   flex-direction: $direction;
 }
 
-.navbar {
+#navbar {
+  z-index: 999;
+  background-color: #1d1d1d;
+  position: fixed;
+  top: 0;
   width: 100vw;
+  left: 0;
+  height: 13vh;
+  @include flex(row);
+  padding: 10px 7vw;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar ul li {
+  list-style: none;
+}
+#navbar ul {
   @include flex(row);
   align-items: center;
-  justify-content: space-around;
+  gap: 3vw;
+}
+
+.navbar-overlay {
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  height: 10vh;
-  z-index: 999;
-  background-color: red;
   top: 0;
-  padding: 20px 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.353);
+  z-index: 10;
+}
+.navbar-mobile {
+  @include flex(column);
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  background-color: #1d1d1d;
+  top: 0;
+  z-index: 999 !important;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.navbar-mobile-ul {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  gap: 30px !important;
+}
+.w3-button{
+  background-color: #1d1d1d !important;
+  color: white !important;
+  font-weight: 800 !important;
+  &:hover{
+    background-color: #1d1d1d !important;
+    color: white !important;
+  }
 }

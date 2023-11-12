@@ -12,10 +12,16 @@
     .benifits-left {
       @include flex(column);
       justify-content: center;
+      h5 {
+        color: yellow !important;
+        padding: 0;
+        margin: 0;
+      }
       .benefits-left-container {
         @include flex(row);
         @media (max-width: 770px) {
           flex-direction: column;
+          margin-top: 20px;
         }
       }
     }
@@ -31,17 +37,24 @@
       @media (min-width: 770px) {
         .image-container {
           position: relative;
+          height: 100%;
+
+          img {
+            width: 40vw;
+            height: 100%;
+            object-fit: cover;
+          }
         }
         .image-container::after {
           content: "";
           display: block;
           background-color: yellow;
-          transform: translate(30px, 50px);
+          transform: translate(2vw, 50px);
           height: calc(100% - 20px);
           width: 190px;
           position: absolute;
           top: 0;
-          right: 0;
+          right: 1vw;
           z-index: -1;
         }
       }

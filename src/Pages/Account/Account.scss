@@ -1,0 +1,100 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#account {
+  width: 100vw;
+  margin-top: 15vh;
+  @include flex(column);
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+  .account-userdetails {
+    @include flex(column);
+    align-items: flex-start;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 40px 20px 20px 5vw;
+    width: 60vw;
+    @media (max-width: 770px) {
+      width: 80vw;
+    }
+  }
+  .account-onrent {
+    @include flex(column);
+    width: 60vw;
+    gap: 30px;
+    @media (max-width: 1000px) {
+      align-items: center;
+    }
+    @media (max-width: 770px) {
+      width: 80vw;
+    }
+    .account-onrent-div {
+      @include flex(row);
+      flex-wrap: wrap;
+      gap: 4vw;
+      width: 100%;
+      justify-content: flex-start;
+      .account-onrent-div-card {
+        width: 25vw;
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+        &:hover {
+          box-shadow: yellow 0px 1px 5px 0px;
+        }
+        @media (max-width: 1000px) {
+          width: 40vw;
+        }
+        @media (max-width: 770px) {
+          width: 70vw;
+          margin: 20px auto;
+        }
+        .account-onrent-div-card-content {
+          @include flex(column);
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  .account-renthistory{
+    @include flex(column);
+    width: 60vw;
+    gap: 30px;
+    @media (max-width: 1000px) {
+      align-items: center;
+    }
+    @media (max-width: 770px) {
+      width: 80vw;
+    }
+    .account-renthistory-div {
+      @include flex(row);
+      flex-wrap: wrap;
+      gap: 4vw;
+      width: 100%;
+      justify-content: flex-start;
+      .account-renthistory-card {
+        width: 25vw;
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+        &:hover {
+          box-shadow: yellow 0px 1px 5px 0px;
+        }
+        @media (max-width: 1000px) {
+          width: 40vw;
+        }
+        @media (max-width: 770px) {
+          width: 70vw;
+          margin: 20px auto;
+        }
+        .account-renthistory-card-content {
+          @include flex(column);
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

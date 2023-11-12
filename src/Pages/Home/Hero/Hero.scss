@@ -5,16 +5,27 @@
 #hero {
   width: 100vw;
   height: 120vh;
+  background-image: url(http://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/slider-bg.jpg?id=4829);
   @include flex(column);
   align-items: center;
+  background-position: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 20px;
+  color: white;
+  h1,h4,h5 {
+    text-align: center;
+    color: white !important;
+  }
   form {
-    width: 95vw;
+    width: 85vw;
     @include flex(row);
-    background-color: rgba(0, 0, 0, 0.561);
-    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.32);
+    justify-content: center;
     padding: 15px;
     flex-wrap: wrap;
+    gap: 3vw;
     align-items: center;
     @media (max-width: 770px) {
       flex-direction: column;
@@ -23,6 +34,15 @@
     }
   }
 }
-.custom-datepicker .MuiInputBase-root {
-  padding-top: 0;
+
+.hero-input-field {
+  width: 225px !important;
+  @media (max-width: 770px) {
+    width: 80vw !important;
+  }
+}
+.hero-input-field input:focus {
+  outline: none; 
+  padding: 20px;
+  border: 2px solid yellowgreen; 
 }

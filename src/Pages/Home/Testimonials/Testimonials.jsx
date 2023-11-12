@@ -11,7 +11,7 @@ export default function Testimonials() {
         src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/07/testimon-@2x-833x510.jpg"
       />
       <div className="testimonials-content">
-        <p>
+        <p style={{color:"white"}}>
           So happy to write this testimonial to see that I'm very thankful to
           you guys even you so awesome and professional Although with service
           while offering our employees the best training and a working
@@ -22,15 +22,15 @@ export default function Testimonials() {
             display: "flex",
             flexDirection: "row",
             marginTop: "5vw",
-            gap: "5vw",
+            gap: "4vw",
             position: "absolute",
             right: "5vw",
           }}
         >
-          <p>
+          <p style={{color:"white"}}>
             <b>Mark James</b>
           </p>
-          <p>        
+          <p style={{color:"white"}}>        
             <b>Creative Heads Inc</b>
           </p>
         </div>

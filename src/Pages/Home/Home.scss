@@ -1,0 +1,57 @@
+@font-face {
+  font-family: SegoeUiBold;
+  src: url(../../../public/Asssets/Fonts/SegoeUIBold.woff);
+}
+@font-face {
+  font-family: SegoeUiRegular;
+  src: url(../../../public/Asssets/Fonts/SegoeUI.woff);
+}
+
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+h1 {
+  font-family: SegoeUiBold !important;
+  text-transform: uppercase;
+  color: #313131 !important;
+  font-weight: 900 !important;
+  font-size: clamp(2rem, 5vw, 60px) !important;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.25vw, 50px) !important;
+  font-family: SegoeUiBold !important;
+  text-transform: uppercase;
+  color: #313131 !important;
+  font-weight: 900 !important;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3.125vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.125rem, 2.8125vw, 2rem) !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+h5 {
+  font-size: clamp(0.75rem, 2.5vw, 1.25rem) !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+  color: #313131 !important;
+}
+
+h6 {
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+}
+
+li {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+p {
+  font-size: clamp(0.75rem, 1.75vw, 1rem) !important;
+  font-family: SegoeUiRegular !important;
+}

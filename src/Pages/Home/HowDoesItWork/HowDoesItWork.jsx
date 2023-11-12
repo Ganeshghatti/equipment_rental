@@ -5,8 +5,8 @@ import "./HowDoesItWork.scss";
 export default function HowDoesItWork() {
   return (
     <section id="HowDoesItWork">
-      <h1>HOW DOES IT WORK</h1>
-      <MDBRow style={{ width: "100vw" }}>
+      <h1 className="HowDoesItWork-heading">HOW DOES IT WORK</h1>
+      <MDBRow style={{ width: "85vw" }}>
         <MDBCol
           md="6"
           style={{
@@ -24,9 +24,10 @@ export default function HowDoesItWork() {
               gap: "10px",
             }}
           >
-            <h1>1</h1>
+            <h1 className="HowDoesItWork-numbering">1</h1>
             <div>
-              <h3>Search For The Equipment You Need</h3>
+              <h3 style={{ paddingTop: "20px" }}>Search For The Equipment You Need</h3>
+              <hr style={{backgroundColor:"yellow",color:"yellow",height: "4px"}}/>
               <p style={{ paddingTop: "20px" }}>
                 Get all the blog lists & single post templates you’ll ever need
                 to share your news & stories with the crowd. Get all the blog
@@ -44,11 +45,15 @@ export default function HowDoesItWork() {
           />
         </MDBCol>
       </MDBRow>
-      <img
-        src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/arrows.png"
-        alt=""
-      />
-      <MDBRow style={{ width: "100vw" }}>
+      {window.innerWidth > 770 ? (
+        <img
+          src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/arrows.png"
+          alt=""
+          style={{width:"75vw",height:"30vh",objectFit:"contain"}}
+        />
+      ) : null}
+
+      <MDBRow style={{ width: "85vw" }}>
         <MDBCol md="6">
           <img
             src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/Section.png"
@@ -73,9 +78,11 @@ export default function HowDoesItWork() {
               gap: "10px",
             }}
           >
-            <h1>1</h1>
+            <h1 className="HowDoesItWork-numbering">1</h1>
             <div>
-              <h3>Search For The Equipment You Need</h3>
+              <h3 style={{ paddingTop: "20px" }}>Search For The Equipment You Need</h3>
+              <hr style={{backgroundColor:"yellow",color:"yellow",height: "4px"}}/>
+
               <p style={{ paddingTop: "20px" }}>
                 Get all the blog lists & single post templates you’ll ever need
                 to share your news & stories with the crowd. Get all the blog
@@ -86,11 +93,14 @@ export default function HowDoesItWork() {
           </div>
         </MDBCol>
       </MDBRow>
-      <img
-        src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/arrows-600x225.png"
-        alt=""
-      />
-      <MDBRow style={{ width: "100vw" }}>
+      {window.innerWidth > 770 ? (
+        <img
+          src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/arrows.png"
+          alt=""
+          style={{width:"75vw",height:"30vh",objectFit:"contain"}}
+        />
+      ) : null}
+      <MDBRow style={{ width: "85vw" }}>
         <MDBCol
           md="6"
           style={{
@@ -108,9 +118,11 @@ export default function HowDoesItWork() {
               gap: "10px",
             }}
           >
-            <h1>1</h1>
+            <h1 className="HowDoesItWork-numbering">1</h1>
             <div>
-              <h3>Search For The Equipment You Need</h3>
+              <h3 style={{ paddingTop: "20px" }}>Search For The Equipment You Need</h3>
+              <hr style={{backgroundColor:"yellow",color:"yellow",height: "4px"}}/>
+
               <p style={{ paddingTop: "20px" }}>
                 Get all the blog lists & single post templates you’ll ever need
                 to share your news & stories with the crowd. Get all the blog

@@ -2,6 +2,7 @@ import { MDBFooter } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { MDBContainer } from "mdb-react-ui-kit";
+import logo from "./logoplaceholder.png";
 
 export default function Footer() {
   return (
@@ -9,7 +10,10 @@ export default function Footer() {
       className="text-center text-lg-start text-muted"
       style={{ width: "100vw", backgroundColor: "black", padding: "40px 0" }}
     >
-      <MDBContainer className="text-center text-md-start mt-5" style={{margin:"0"}}>
+      <MDBContainer
+        className="text-center text-md-start mt-5"
+        style={{ margin: "0" }}
+      >
         <MDBRow
           className="mt-3"
           style={{
@@ -26,18 +30,25 @@ export default function Footer() {
             <h6
               className="text-uppercase fw-bold mb-4"
               style={{
-                display: "flex",
-                flexDirection: "row",
+                "@media (maxWidth: 770px)": {
+                  margin: "auto",
+                },
                 color: "white",
               }}
             >
               <b>About company</b>
             </h6>
-            <img
-              src="./Asssets/Images/logoplaceholder.png"
+            {/* <img
+              src={logo}
               alt="logo"
-              style={{ width: "75px" }}
-            />
+              style={{
+                width: "75px",
+                "@media (maxWidth: 770px)": {
+                  margin: "0 auto",
+                },
+              }}
+            /> */}
+
             <p style={{ color: "white" }}>
               Backhoe is diversified construction company, made up of team of
               people who are proven in their industries. All working to desing

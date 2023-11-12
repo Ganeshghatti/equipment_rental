@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+.navbar-npm-library {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-npm-library .navbar-logo-img {
+  width: 200px;
+  padding: 0 30px 0 0;
+}
+
+nav {
+  width: 100vw;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.navbar-hamburgur-icon {
+  border: none !important;
+}
+
+.navbar-contact-button {
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  background: #28bbea;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(12px, 1.75vw, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 0 10vw;
+}/*# sourceMappingURL=Navbar.css.map */

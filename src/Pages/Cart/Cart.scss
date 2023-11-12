@@ -1,0 +1,30 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+#cart {
+  width: 100vw;
+  margin-top: 15vh;
+  @include flex(column);
+  align-items: center;
+  padding: 50px 0;
+  .cart-div {
+    width: 80vw;
+    @include flex(column);
+    align-items: center;
+    gap: 20px;
+    .cart-items-div {
+      @include flex(column);
+      align-items: center;
+      width: 100%;
+      gap: 15px;
+      .cart-items-card {
+        border: 2px solid black;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -11,36 +11,36 @@ export default function Category() {
   const data = [
     {
       title: "Category 1",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
       title: "Category 2",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
       title: "Category 3",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
       title: "Category 4",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
       title: "Category 5",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
       title: "Category 6",
-      img: "./Asssets/Images/Featured/1.png",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-        title: "Category 7",
-        img: "./Asssets/Images/Featured/1.png",
-      },
-      {
-        title: "Category 8",
-        img: "./Asssets/Images/Featured/1.png",
-      },
+      title: "Category 7",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
+    },
+    {
+      title: "Category 8",
+      img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
+    },
   ];
   const handleClick = (category) => {
     window.location.href = `/categories/${category}`;
@@ -52,7 +52,7 @@ export default function Category() {
       <div className="categories-div">
         {data.map((category, index) => (
           <Card
-            sx={{ maxWidth: 345 }}
+            sx={{ maxWidth: 300 }}
             key={index}
             className="category-div"
             onClick={() => handleClick(category.title)}
@@ -61,18 +61,14 @@ export default function Category() {
               component="img"
               image={category.img}
               title={category.title}
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", width: "100%", margin: "auto" }}
             />
-            <CardContent
-              style={{ padding: "10px", margin: "0" }}
-            >
+            <CardContent style={{ padding: "10px", margin: "0" }}>
               <Typography
                 gutterBottom
-                variant="h5"
-                component="p"
                 style={{ textAlign: "center", padding: "0", margin: "0" }}
               >
-                {category.title}
+                <h4> {category.title}</h4>
               </Typography>
             </CardContent>
           </Card>

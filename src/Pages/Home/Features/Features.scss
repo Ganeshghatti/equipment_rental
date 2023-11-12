@@ -7,19 +7,45 @@
   width: 100vw;
   @include flex(column);
   gap: 40px;
-  padding: 50px 0;
-  .features-div {
-    @include flex(row);
-    flex-wrap: wrap;
-    gap: 5vw 0;
-    justify-content: space-around;
-    .card {
-      @include flex(column);
-      align-items: start;
-      justify-content: center;
-      img {
-        padding: 0 0 0 20px;
-      }
+  align-items: center;
+  padding: 60px 30px;
+  h1 {
+    align-content: flex-start;
+    position: relative;
+    left: -30vw;
+    margin-bottom: 30px;
+    @media (max-width: 770px) {
+      left: -18vw;
     }
   }
+  @media (min-width: 770px) {
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 1vw;
+      bottom: -15px;
+      width: 80px;
+      height: 7px;
+      background-color: yellow;
+    }
+  }
+  .features-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    &:hover {
+      box-shadow: yellow 0px 1px 5px 0px;
+    }
+    img {
+      padding: 0 0 0 20px;
+    }
+    @media (max-width: 770px) {
+      margin: 20px auto;
+    }
+  }
+}
+.features-img-card {
+  background-image: url("https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/08/bulldozer-420x290.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

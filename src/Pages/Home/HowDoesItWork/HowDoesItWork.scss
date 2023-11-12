@@ -6,8 +6,34 @@
 #HowDoesItWork {
   width: 100vw;
   padding: 50px 0;
+  gap: 30px;
   @include flex(column);
   align-items: center;
+  .HowDoesItWork-heading {
+    padding: 0 0 0 6.5vw;
+    position: relative;
+    left: -25vw;
+    @media (max-width: 770px) {
+      left: 0vw;
+    }
+  }
+  @media (min-width: 770px) {
+    .HowDoesItWork-heading::after {
+      content: "";
+      position: absolute;
+      left: 7.5vw;
+      bottom: -15px;
+      width: 80px;
+      height: 7px;
+      background-color: yellow;
+    }
+  }
+  .HowDoesItWork-numbering {
+    color: yellow !important;
+    @media (max-width: 770px) {
+      margin-top: 20px;
+    }
+  }
   .HowDoesItWorkImg {
     width: 45vw;
     @media (max-width: 770px) {

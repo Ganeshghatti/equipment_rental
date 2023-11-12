@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import dayjs from "dayjs";
+import Button from "@mui/material/Button";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -23,31 +24,31 @@ const Hero = () => {
     console.log("Start Date: ", startDate);
     console.log("End Date: ", endDate);
   };
-  const inputStyle = {
-    width: "220px",
-  };
+
   return (
     <section id="hero">
       <h1>RENT OR BUY</h1>
       <h4>Find your construction machines and more!</h4>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label style={{marginTop:"7px"}}>
           <TextField
             id="outlined-basic"
             label="What are you looking for?"
             type="text"
             variant="outlined"
             value={first}
-            style={{ ...inputStyle, backgroundColor: "white" }}
+            className="hero-input-field"
+            style={{ backgroundColor: "white" }}
             onChange={(e) => setFirst(e.target.value)}
           />
         </label>
-        <label>
+        <label style={{marginTop:"7px"}}>
           <Select
             value={second}
             onChange={(e) => setSecond(e.target.value)}
             displayEmpty
-            style={{ ...inputStyle, backgroundColor: "white" }}
+            className="hero-input-field"
+            style={{ backgroundColor: "white"}}
             label="What are you looking for?"
           >
             <MenuItem value="" disabled>
@@ -65,8 +66,8 @@ const Hero = () => {
           <DemoContainer components={["DatePicker"]}>
             <DatePicker
               label="Pick start date"
-              className="custom-datepicker"
-              sx={{ backgroundColor: "white", width: "220px" }}
+              className="custom-datepicker hero-input-field"
+              sx={{ backgroundColor: "white" }}
             />
           </DemoContainer>
         </LocalizationProvider>
@@ -75,17 +76,21 @@ const Hero = () => {
           <DemoContainer components={["DatePicker"]}>
             <DatePicker
               label="Pick end date"
-              className="custom-datepicker"
-              sx={{ backgroundColor: "white", width: "220px" }}
+              className="custom-datepicker hero-input-field"
+              sx={{ backgroundColor: "white"}}
             />
           </DemoContainer>
         </LocalizationProvider>
-        <button type="submit">Submit</button>
+        <Button variant="contained" style={{marginTop:"7px",padding:"15px 0" }} className="hero-input-field">
+          Submit
+        </Button>
       </form>
-      <h4>
-        Or list all available equipment in{" "}
-        <span style={{ color: "yellow" }}>marketplace.</span>
-      </h4>
+      <h5>
+        Or list all available equipment in &nbsp;
+        <span style={{ color: "yellow", cursor: "pointer" }}>
+          marketplace.
+        </span>
+      </h5>
     </section>
   );
 };

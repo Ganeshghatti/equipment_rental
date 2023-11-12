@@ -1,51 +1,63 @@
 @mixin flex($direction) {
-    display: flex;
-    flex-direction: $direction;
-  }
-  
-  #benifits2{
-    padding: 50px 0;
+  display: flex;
+  flex-direction: $direction;
+}
+
+#benifits2 {
+  padding: 50px 0;
+  width: 100vw;
+  .benifits-div {
     width: 100vw;
-    .benifits-div {
-      width: 100vw;
-      padding: 0 5vw;
-      .benifits-right {
-        @include flex(column);
-        justify-content: center;
-        .benefits-right-container {
-          @include flex(row);
-          @media (max-width: 770px) {
-            flex-direction: column;
-          }
+    padding: 0 5vw;
+    .benifits-right {
+      @include flex(column);
+      justify-content: center;
+      h5 {
+        color: yellow !important;
+
+      }
+
+      .benefits-right-container {
+        @include flex(row);
+        @media (max-width: 770px) {
+          margin-top: 20px;
+          flex-direction: column;
         }
       }
-      .benifits-left {
-        @media (max-width: 770px) {
-          .image-container {
-            img {
-              width: 100%;
-            }
+    }
+    .benifits-left {
+      @media (max-width: 770px) {
+        .image-container {
+          img {
+            width: 100%;
           }
-          margin-top: 40px;
         }
-        @media (min-width: 770px) {
-          .image-container {
-            position: relative;
+        margin-top: 40px;
+      }
+      @media (min-width: 770px) {
+        .image-container {
+          position: relative;
+          height: 100%;
+
+          img {
+            width: 40vw;
+            height: 100%;
+            object-fit: cover;
           }
-          .image-container::after {
-            content: "";
-            display: block;
-            background-color: yellow;
-            transform: translate(-30px, 50px);
-            height: calc(100% - 20px);
-            width: 190px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-          }
+        }
+        .image-container::after {
+          content: "";
+          display: block;
+          background-color: yellow;
+          transform: translate(-4vw, 50px);
+          height: calc(100% - 20px);
+          width: 190px;
+          position: absolute;
+          top: 0;
+          left: 1vw;
+          z-index: -1;
         }
       }
     }
   }
-  
+}
