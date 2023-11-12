@@ -6,8 +6,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 
 export default function Category() {
+  const navigate = useNavigate();
+
   const data = [
     {
       title: "Category1",
@@ -43,8 +46,10 @@ export default function Category() {
     },
   ];
   const handleClick = (category) => {
-    console.log(category)
-    window.location.href = `/categories/${category}`;
+    console.log(category);
+    navigate(`/categories/${category}`);
+
+    // window.location.href = `/categories/${category}`;
   };
 
   return (

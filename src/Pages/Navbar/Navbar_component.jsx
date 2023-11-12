@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Avatar from "@mui/material/Avatar";
 import "./Navbar.scss";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function NavbarComponent() {
   const [menu, setmenu] = useState(false);
