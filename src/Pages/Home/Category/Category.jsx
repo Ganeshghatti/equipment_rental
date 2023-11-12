@@ -10,35 +10,35 @@ import Typography from "@mui/material/Typography";
 export default function Category() {
   const data = [
     {
-      title: "Category 1",
+      title: "Category1",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 2",
+      title: "Category2",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 3",
+      title: "Category3",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 4",
+      title: "Category4",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 5",
+      title: "Category5",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 6",
+      title: "Category6",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 7",
+      title: "Category7",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
     {
-      title: "Category 8",
+      title: "Category8",
       img: "https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg",
     },
   ];
