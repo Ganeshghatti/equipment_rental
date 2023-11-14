@@ -38,7 +38,11 @@ export default function Cart() {
             }}
           >
             <h1>Cart</h1>
-            <Button variant="outlined" onClick={clearcartf} style={{marginRight:"4vw"}}>
+            <Button
+              variant="outlined"
+              onClick={clearcartf}
+              style={{ marginRight: "4vw" }}
+            >
               Clear Cart
             </Button>
           </div>
@@ -46,7 +50,7 @@ export default function Cart() {
             {cartItems.map((item, index) => (
               <MDBRow key={index} className="cart-items-card">
                 <MDBCol
-                  md="8"
+                  md="4"
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -57,26 +61,27 @@ export default function Cart() {
                 >
                   <img
                     src="https://themes.webdevia.com/backhoe-heavy-construction-equipment-rentals-machinery-wordpress-theme/wp-content/uploads/2019/09/product_0005__-700x700.jpg"
-                    alt="product-img" width={200}
+                    alt="product-img"
+                    width={200}
                   />
+                </MDBCol>
+                <MDBCol md="4">
                   <div>
                     <h3>{item.name}</h3>
                     <h5>{item.price}Rs /Day</h5>
                   </div>
-                  <div>
-                    <h5>
-                      {item.startDate} to {item.endDate}
-                    </h5>
-                    <h5>duration: {item.duration} Days</h5>
-                    <h5>Total amount : {item.total}Rs</h5>
-                  </div>
+                  <h5>
+                    {item.startDate} to {item.endDate}
+                  </h5>
+                  <h5>duration: {item.duration} Days</h5>
+                  <h5>Total amount : {item.total}Rs</h5>
                 </MDBCol>
                 <MDBCol
                   md="4"
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent:"flex-end",
+                    justifyContent: "center",
                   }}
                 >
                   <Button

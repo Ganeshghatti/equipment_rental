@@ -104,7 +104,7 @@ export default function ProductPage() {
     dispatch(addToCart(newitem));
     alert("added to cart");
     setDuration(null);
-    setStartDate(null)
+    setStartDate(null);
     setEndDate(null);
   };
 
@@ -116,13 +116,18 @@ export default function ProductPage() {
         </Alert>
       </Snackbar>
       {selectedProduct && (
-        <MDBRow style={{ width: "80vw" }}>
+        <MDBRow className="productpage-productcard">
           <MDBCol md="6">
             <img
               src={selectedProduct.img}
               alt={selectedProduct.name}
               title={selectedProduct.name}
-              style={{ objectFit: "contain" ,width:"100%",margin:"auto",height:"100%"}}
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                margin: "auto",
+                height: "100%",
+              }}
             />
           </MDBCol>
           <MDBCol
@@ -131,7 +136,6 @@ export default function ProductPage() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              paddingLeft: "50px",
               gap: "30px",
             }}
           >
@@ -181,7 +185,6 @@ export default function ProductPage() {
             <Button variant="contained" onClick={addtocartf}>
               Add to Cart!
             </Button>
-
           </MDBCol>
         </MDBRow>
       )}
